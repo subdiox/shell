@@ -1,3 +1,7 @@
+if [ ! -e "${HOME}/.zgen" ]; then
+  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+fi
+
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
