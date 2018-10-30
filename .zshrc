@@ -25,3 +25,5 @@ if ! zgen saved; then
   # generate the init script from plugins above
   zgen save
 fi
+
+unsetopt promptcr
