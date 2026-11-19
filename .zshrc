@@ -15,9 +15,17 @@ if ! zgen saved; then
   zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
 
-  # prezto and modules
+  # prezto and modules (zgen's default set, minus utility)
+  ZGEN_PREZTO_LOAD_DEFAULT=0
   zgen prezto
-  zgen prezto git
+  zgen prezto environment
+  zgen prezto terminal
+  zgen prezto editor
+  zgen prezto history
+  zgen prezto directory
+  zgen prezto spectrum
+  zgen prezto completion
+  zgen prezto prompt
   zgen prezto history-substring-search
   zgen prezto syntax-highlighting
   zgen prezto autosuggestions
@@ -27,3 +35,7 @@ if ! zgen saved; then
 fi
 
 unsetopt promptcr
+
+unalias gws 2>/dev/null
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
